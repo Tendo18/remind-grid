@@ -1,13 +1,16 @@
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 
 export function Logo({
   className,
   showWordmark = true,
+  href = "/dashboard",
 }: {
   className?: string
   showWordmark?: boolean
+  href?: string | null
 }) {
-  return (
+  const content = (
     <div className={cn("flex items-center gap-2.5", className)}>
       <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
         <GridMark />
@@ -18,6 +21,14 @@ export function Logo({
         </span>
       )}
     </div>
+  )
+
+  if (href === null) return content
+
+  return (
+    <Link href={href} className="transition-opacity hover:opacity-80">
+      {content}
+    </Link>
   )
 }
 

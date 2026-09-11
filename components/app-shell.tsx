@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils"
 import { api } from "@/lib/api"
 import { auth } from "@/lib/auth"
 
+
 const NAV = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/subscriptions", label: "Subscriptions", icon: CreditCard },
@@ -146,10 +147,10 @@ function UserPanel({
         <span className="flex size-9 items-center justify-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
           {getInitials(profile)}
         </span>
-        <div className="min-w-0 flex-1">
+        <Link href="/profile" className="min-w-0 flex-1 hover:opacity-80">
           <p className="truncate text-sm font-medium text-foreground">{displayName}</p>
           <p className="truncate text-xs text-muted-foreground">{email}</p>
-        </div>
+        </Link>
         <Bell className="size-4 text-muted-foreground" />
       </div>
       <Button

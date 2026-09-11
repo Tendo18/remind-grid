@@ -86,6 +86,9 @@ export const api = {
   authPost<T>(path: string, body: unknown) {
     return authRequest<T>(path, { method: "POST", body: JSON.stringify(body) })
   },
+  put<T>(path: string, body: unknown) {
+    return authRequest<T>(path, { method: "PUT", body: JSON.stringify(body) })
+  },
   patch<T>(path: string, body: unknown) {
     return authRequest<T>(path, { method: "PATCH", body: JSON.stringify(body) })
   },

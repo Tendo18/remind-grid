@@ -18,12 +18,6 @@ export default function AuthPage() {
 
       <header className="relative z-10 flex items-center justify-between px-6 py-5 sm:px-10">
         <Logo />
-        <p className="text-sm text-muted-foreground">
-          New here?{" "}
-          <Link href="#" className="font-medium text-primary hover:underline">
-            Take a tour
-          </Link>
-        </p>
       </header>
 
       <div className="relative z-10 flex flex-1 items-center justify-center px-4 py-10 sm:py-16">
