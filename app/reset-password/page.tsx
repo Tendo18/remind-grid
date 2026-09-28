@@ -176,7 +176,7 @@ export default function ResetPasswordPage() {
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     Your password has been changed. You can now log in with your new password.
                   </p>
-                  <Button className="mt-6 w-full" onClick={() => router.push("/")}>
+                  <Button className="mt-6 w-full" onClick={() => router.push("/login")}>
                     Back to log in
                   </Button>
                 </div>
@@ -185,7 +185,7 @@ export default function ResetPasswordPage() {
               {step !== "done" && (
                 <p className="mt-4 text-center text-sm text-muted-foreground">
                   Remembered your password?{" "}
-                  <Link href="/" className="font-medium text-primary hover:underline">
+                  <Link href="/login" className="font-medium text-primary hover:underline">
                     Log in
                   </Link>
                 </p>

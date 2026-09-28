@@ -83,7 +83,7 @@ export default async function VerifyEmailPage({
                 )}
 
                 <Link
-                  href="/"
+                  href="/login"
                   className={cn(buttonVariants(), "mt-6 w-full")}
                 >
                   Log in

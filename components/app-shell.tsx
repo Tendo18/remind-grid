@@ -33,13 +33,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       .then(setProfile)
       .catch(() => {
         // token invalid/expired and refresh failed — bounce to login
-        router.push("/")
+        router.push("/login")
       })
   }, [router])
 
   async function handleLogout() {
     await auth.logout()
-    router.push("/")
+    router.push("/login")
   }
 
   return (
